@@ -1,0 +1,11 @@
+{
+  "setting": "Setting",
+  "setting_common": "Common",
+  "setting_language": "Language",
+  "setting_custom_theme": "Enable custom theme",
+
+  "language": "{languageType, select, en{English} fa{Farsi}}",
+  "theme": "{themeType, select, dark{Dark} light{Light}}",
+  "home": "Home",
+  "chat": "Chat"
+}

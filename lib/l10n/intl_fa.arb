@@ -1,0 +1,13 @@
+{
+  "setting": "تنظیمات",
+  "setting_common": "مشترک",
+  "setting_language": "زبان",
+  "setting_custom_theme": "انتخاب تم",
+
+  "language": "{languageType, select, en{انگلیسی} fa{فارسی}}",
+
+
+  "theme": "{themeType, select, dark{تاریک} light{روشن}}",
+  "home": "خانه",
+  "chat": "گفتگو"
+}
