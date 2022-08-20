@@ -1,14 +1,18 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:simple/core/config/locale/locale_configs.dart';
 import 'package:simple/core/config/routes/app_routes.dart';
 import 'package:simple/core/config/theme/app_theme.dart';
-import 'package:simple/core/di/di_setup.dart';
+import 'package:simple/core/di/base/di_setup.dart';
+import 'package:simple/core/di/network/di/network_module.dart';
 import 'package:simple/core/service/theme_language_provider/language_theme_provider.dart';
 import 'package:simple/generated/l10n.dart';
 
 void main() {
+  HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
   configureDependencies();
   Provider.debugCheckInvalidValueType = null;

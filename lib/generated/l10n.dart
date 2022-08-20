@@ -137,6 +137,36 @@ class S {
       args: [],
     );
   }
+
+  /// `MyIp`
+  String get my_ip {
+    return Intl.message(
+      'MyIp',
+      name: 'my_ip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bloc`
+  String get bloc {
+    return Intl.message(
+      'Bloc',
+      name: 'bloc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provider`
+  String get provider {
+    return Intl.message(
+      'Provider',
+      name: 'provider',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

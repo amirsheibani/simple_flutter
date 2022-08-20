@@ -7,5 +7,8 @@
   "language": "{languageType, select, en{English} fa{Farsi}}",
   "theme": "{themeType, select, dark{Dark} light{Light}}",
   "home": "Home",
-  "chat": "Chat"
+  "chat": "Chat",
+  "my_ip": "MyIp",
+  "bloc": "Bloc",
+  "provider": "Provider"
 }

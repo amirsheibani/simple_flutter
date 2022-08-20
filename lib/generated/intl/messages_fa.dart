@@ -32,9 +32,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "bloc": MessageLookupByLibrary.simpleMessage("Bloc"),
         "chat": MessageLookupByLibrary.simpleMessage("گفتگو"),
         "home": MessageLookupByLibrary.simpleMessage("خانه"),
         "language": m0,
+        "my_ip": MessageLookupByLibrary.simpleMessage("ادرس IP"),
+        "provider": MessageLookupByLibrary.simpleMessage("Provider"),
         "setting": MessageLookupByLibrary.simpleMessage("تنظیمات"),
         "setting_common": MessageLookupByLibrary.simpleMessage("مشترک"),
         "setting_custom_theme":

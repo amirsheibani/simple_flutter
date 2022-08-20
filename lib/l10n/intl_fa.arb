@@ -9,5 +9,8 @@
 
   "theme": "{themeType, select, dark{تاریک} light{روشن}}",
   "home": "خانه",
-  "chat": "گفتگو"
+  "chat": "گفتگو",
+  "my_ip": "ادرس IP",
+  "bloc": "Bloc",
+  "provider": "Provider"
 }

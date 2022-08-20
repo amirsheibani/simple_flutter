@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple/features/home/presentation/routes/home_routes.dart';
 import 'package:simple/features/main/routes/main_routes.dart';
+import 'package:simple/features/myip/presentation/routes/myip_routes.dart';
 import 'package:simple/features/setting/routes/setting_routes.dart';
 
 
@@ -24,7 +25,8 @@ class AppRoutes {
         return SettingRoutes.onGenerateRoutes(settings);
       case 'home_page':
         return HomeRoutes.onGenerateRoutes(settings);
-
+      case 'myip':
+        return MyIpRoutes.onGenerateRoutes(settings);
       default:
         return null;
     }
