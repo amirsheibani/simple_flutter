@@ -42,7 +42,9 @@ dev_dependencies:
     sdk: flutter
   integration_test:
     sdk: flutter
+  test: ^1.17.12
   mocktail: ^0.3.0
+  bloc_test: ^9.1.0
   flutter_lints: ^2.0.0
   freezed: ^2.1.0+1
   build_runner: ^2.2.0
