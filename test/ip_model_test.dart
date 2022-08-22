@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:simple/features/myip/data/remote/model/ip_model.dart';
 import 'package:simple/features/myip/domain/entity/ip_entity.dart';
 
 

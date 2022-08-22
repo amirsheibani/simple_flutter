@@ -37,6 +37,12 @@ dependencies:
 
   url_launcher: ^6.1.5
 
+  annotations:
+    git:
+      url: https://github.com/amirsheibani/modelGeneratorsAnnotation.git
+      ref: main # branch name
+      version: any
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -51,6 +57,11 @@ dev_dependencies:
   injectable_generator: ^1.5.3
   retrofit_generator: ^4.0.1
   json_serializable: ^6.2.0
+  generators:
+    git:
+      url: https://github.com/amirsheibani/modelGenerator.git
+      ref: main # branch name
+      version: any
 
 flutter:
   uses-material-design: true

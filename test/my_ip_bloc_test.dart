@@ -15,6 +15,8 @@ main() {
     late MyIPUseCaseMock myIPUseCaseMock;
     late MyIpBloc myIpBloc;
     final IpEntity? tIpEntity;
+
+
     setUp(() {
       myIPUseCaseMock = MyIPUseCaseMock();
       myIpBloc = MyIpBloc(myIPUseCaseMock);

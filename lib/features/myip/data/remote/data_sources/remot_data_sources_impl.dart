@@ -1,8 +1,8 @@
 import 'package:injectable/injectable.dart';
 import 'package:simple/core/base/data/model/base_response.dart';
 import 'package:simple/features/myip/data/remote/data_sources/remot_data_sources.dart';
-import 'package:simple/features/myip/data/remote/model/ip_model.dart';
 import 'package:simple/features/myip/data/remote/service/api_service.dart';
+import 'package:simple/features/myip/domain/entity/ip_entity.dart';
 
 
 @LazySingleton(as: IpRemoteDataSource)
