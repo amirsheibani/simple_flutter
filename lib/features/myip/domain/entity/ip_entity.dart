@@ -1,11 +1,7 @@
-
-
 import 'package:annotations/generate_model_annotations.dart';
 
-part '../../data/remote/model/ip_entity.g.dart';
-
-@generateModelMapper
-@generateModelClass
+@GenerateModelClass(className:'IpModel')
+@GenerateMapper(model: true,entity: true)
 class IpEntity {
   final String? ip;
   final String? country;
