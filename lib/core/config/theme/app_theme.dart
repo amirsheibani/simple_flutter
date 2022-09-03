@@ -5,12 +5,20 @@ import 'package:google_fonts/google_fonts.dart';
 enum ThemeType { dark, light }
 
 extension AppTheme on ThemeData {
+  Color get paletteColorBackground => brightness == Brightness.light
+      ? Colors.blueGrey.shade300
+      : Colors.blueGrey.shade800;
 
-  Color get paletteColorBackground => brightness == Brightness.light ? Colors.blueGrey.shade300 : Colors.blueGrey.shade800;
-  Color get paletteColorAppBarBackground => brightness == Brightness.light ? Colors.teal.shade300 : Colors.teal.shade800;
-  Color get paletteColorButtonBackground => brightness == Brightness.light ? Colors.teal.shade800 : Colors.teal.shade300;
-  Color get paletteColorSettingSectionBackground => brightness == Brightness.light ? Colors.white : Colors.blueGrey.shade600;
+  Color get paletteColorAppBarBackground => brightness == Brightness.light
+      ? Colors.teal.shade300
+      : Colors.teal.shade800;
 
+  Color get paletteColorButtonBackground => brightness == Brightness.light
+      ? Colors.teal.shade800
+      : Colors.teal.shade300;
+
+  Color get paletteColorSettingSectionBackground =>
+      brightness == Brightness.light ? Colors.white : Colors.blueGrey.shade600;
 
   ThemeData theme(String? languageCode) {
     return brightness == Brightness.light
@@ -28,12 +36,13 @@ extension AppTheme on ThemeData {
             appBarTheme: AppBarTheme(
               elevation: 0,
               color: paletteColorAppBarBackground,
-              systemOverlayStyle:
-                  SystemUiOverlayStyle(statusBarColor: paletteColorAppBarBackground),
+              systemOverlayStyle: SystemUiOverlayStyle(
+                  statusBarColor: paletteColorAppBarBackground),
             ),
             floatingActionButtonTheme: floatingActionButtonTheme.copyWith(
               backgroundColor: Colors.greenAccent,
             ),
+            iconTheme: iconTheme.copyWith(color: Colors.blueGrey.shade900),
             elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
                 padding:
@@ -48,30 +57,31 @@ extension AppTheme on ThemeData {
         : copyWith(
             scaffoldBackgroundColor: Colors.white,
             splashColor: Colors.white,
-            primaryColor: Colors.greenAccent,
-            indicatorColor: Colors.greenAccent,
+            primaryColor: Colors.orangeAccent,
+            indicatorColor: Colors.orangeAccent,
             progressIndicatorTheme: progressIndicatorTheme.copyWith(
-              color: Colors.greenAccent,
+              color: Colors.orangeAccent,
             ),
             textTheme: languageCode == 'en'
-                ? _getDefaultTextTheme(Colors.teal)
-                : _getDefaultPersianTextTheme(Colors.teal),
+                ? _getDefaultTextTheme(Colors.lime)
+                : _getDefaultPersianTextTheme(Colors.lime),
             appBarTheme: const AppBarTheme(
               elevation: 0,
-              color: Colors.greenAccent,
+              color: Colors.orangeAccent,
               systemOverlayStyle:
-                  SystemUiOverlayStyle(statusBarColor: Colors.greenAccent),
+                  SystemUiOverlayStyle(statusBarColor: Colors.orangeAccent),
             ),
             floatingActionButtonTheme: floatingActionButtonTheme.copyWith(
-              backgroundColor: Colors.greenAccent,
+              backgroundColor: Colors.orangeAccent,
             ),
+            iconTheme: iconTheme.copyWith(color: Colors.white),
             elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8)),
-                primary: Colors.greenAccent,
+                primary: Colors.orangeAccent,
                 onPrimary: Colors.white,
               ),
             ),
@@ -159,11 +169,4 @@ extension AppTheme on ThemeData {
             displayColor: color,
             bodyColor: color));
   }
-
-
-
 }
-
-
-
-

@@ -12,5 +12,6 @@
   "chat": "گفتگو",
   "my_ip": "ادرس IP",
   "bloc": "Bloc",
-  "provider": "Provider"
+  "provider": "Provider",
+  "player": "Player"
 }

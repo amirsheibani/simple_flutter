@@ -10,5 +10,6 @@
   "chat": "Chat",
   "my_ip": "MyIp",
   "bloc": "Bloc",
-  "provider": "Provider"
+  "provider": "Provider",
+  "player": "Player"
 }

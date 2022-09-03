@@ -37,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "language": m0,
         "my_ip": MessageLookupByLibrary.simpleMessage("MyIp"),
+        "player": MessageLookupByLibrary.simpleMessage("Player"),
         "provider": MessageLookupByLibrary.simpleMessage("Provider"),
         "setting": MessageLookupByLibrary.simpleMessage("Setting"),
         "setting_common": MessageLookupByLibrary.simpleMessage("Common"),

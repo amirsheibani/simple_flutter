@@ -37,6 +37,9 @@ dependencies:
 
   url_launcher: ^6.1.5
 
+  just_waveform: ^0.0.3
+  flutter_audio_waveforms: ^1.2.1+6
+
   annotations:
     git:
       url: https://github.com/amirsheibani/modelGeneratorsAnnotation.git
@@ -65,4 +68,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
+  assets:
+    - assets/audio/
