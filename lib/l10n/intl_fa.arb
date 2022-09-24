@@ -9,6 +9,7 @@
 
   "theme": "{themeType, select, dark{تاریک} light{روشن}}",
   "home": "خانه",
+  "animation": "انیمیشن",
   "chat": "گفتگو",
   "my_ip": "ادرس IP",
   "bloc": "Bloc",

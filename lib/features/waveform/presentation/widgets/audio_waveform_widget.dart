@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:just_waveform/just_waveform.dart';
 
@@ -87,10 +89,8 @@ class AudioWaveformPainter extends CustomPainter {
       final minY = normalise(waveform.getPixelMin(sampleIdx), height);
       final maxY = normalise(waveform.getPixelMax(sampleIdx), height);
       canvas.drawLine(
-        // Offset(x + strokeWidth / 2, max(strokeWidth * 0.75, minY)),
-        // Offset(x + strokeWidth / 2, min(height - strokeWidth * 0.75, maxY)),
-        Offset(x + strokeWidth / 2, minY),
-        Offset(x + strokeWidth / 2, maxY),
+        Offset(x + strokeWidth / 2, max(strokeWidth * 0.75, minY)),
+        Offset(x + strokeWidth / 2, min(height - strokeWidth * 0.75, maxY)),
         wavePaint,
       );
     }

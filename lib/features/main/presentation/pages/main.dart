@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:simple/core/base/presentation/page/base_stateless_page.dart';
 import 'package:simple/core/base/presentation/widget/custom_consumer.dart';
 import 'package:simple/core/di/base/di_setup.dart';
+import 'package:simple/features/animation/presentation/widgets/animation_widget.dart';
 import 'package:simple/features/home/presentation/manager/test_provider/increment_provider.dart';
 import 'package:simple/features/home/presentation/widgets/home_widget.dart';
 import 'package:simple/features/main/presentation/manager/bottom_navigation_bar_provider.dart';
@@ -30,6 +31,31 @@ class MainPage extends BaseStatelessPage {
 
   @override
   Widget? bottomNavigationBar(BuildContext context) {
+    List<BottomNavigationBarItem> bottomNavigationBarItems = [
+      BottomNavigationBarItem(
+        icon: const Icon(Icons.home_filled),
+        activeIcon: const Icon(Icons.home_filled),
+        label: S.of(context).home,
+      ),
+      BottomNavigationBarItem(
+        icon: const Icon(Icons.network_ping),
+        activeIcon: const Icon(Icons.network_ping),
+        label: S.of(context).my_ip,
+      ),
+      BottomNavigationBarItem(
+        icon: const Icon(Icons.play_circle_outline),
+        activeIcon: const Icon(Icons.play_circle_outline),
+        label: S.of(context).player,
+      ),
+      BottomNavigationBarItem(
+          icon: const Icon(Icons.animation),
+          activeIcon: const Icon(Icons.animation),
+          label: S.of(context).animation),
+      BottomNavigationBarItem(
+          icon: const Icon(Icons.settings),
+          activeIcon: const Icon(Icons.settings),
+          label: S.of(context).setting),
+    ];
     return Consumer<BottomNavigationBarProvider>(
       builder: (context, bottomNavigationBarProvider, child) {
         return bottomNavigationBarProvider.state.whenOrNull(
@@ -40,27 +66,7 @@ class MainPage extends BaseStatelessPage {
                   unselectedItemColor: Theme.of(context).disabledColor,
                   showSelectedLabels: true,
                   showUnselectedLabels: true,
-                  items: <BottomNavigationBarItem>[
-                    BottomNavigationBarItem(
-                      icon: const Icon(Icons.home_filled),
-                      activeIcon: const Icon(Icons.home_filled),
-                      label: S.of(context).home,
-                    ),
-                    BottomNavigationBarItem(
-                      icon: const Icon(Icons.network_ping),
-                      activeIcon: const Icon(Icons.network_ping),
-                      label: S.of(context).my_ip,
-                    ),
-                    BottomNavigationBarItem(
-                      icon: const Icon(Icons.play_circle_outline),
-                      activeIcon: const Icon(Icons.play_circle_outline),
-                      label: S.of(context).player,
-                    ),
-                    BottomNavigationBarItem(
-                        icon: const Icon(Icons.settings),
-                        activeIcon: const Icon(Icons.settings),
-                        label: S.of(context).setting),
-                  ],
+                  items: bottomNavigationBarItems,
                   onTap: (index) {
                     context
                         .read<BottomNavigationBarProvider>()
@@ -74,27 +80,7 @@ class MainPage extends BaseStatelessPage {
               unselectedItemColor: Theme.of(context).disabledColor,
               showSelectedLabels: true,
               showUnselectedLabels: true,
-              items: <BottomNavigationBarItem>[
-                BottomNavigationBarItem(
-                  icon: const Icon(Icons.home_filled),
-                  activeIcon: const Icon(Icons.home_filled),
-                  label: S.of(context).home,
-                ),
-                BottomNavigationBarItem(
-                  icon: const Icon(Icons.network_ping),
-                  activeIcon: const Icon(Icons.network_ping),
-                  label: S.of(context).my_ip,
-                ),
-                BottomNavigationBarItem(
-                  icon: const Icon(Icons.play_circle_outline),
-                  activeIcon: const Icon(Icons.play_circle_outline),
-                  label: S.of(context).player,
-                ),
-                BottomNavigationBarItem(
-                    icon: const Icon(Icons.settings),
-                    activeIcon: const Icon(Icons.settings),
-                    label: S.of(context).setting),
-              ],
+              items: bottomNavigationBarItems,
               onTap: (index) {
                 context
                     .read<BottomNavigationBarProvider>()
@@ -111,6 +97,7 @@ class MainPage extends BaseStatelessPage {
       const HomeWidget(),
       const MyIpWidget(),
       const PlayerWidget(),
+      const AnimationWidget(),
       const SettingWidget(),
     ];
     return CustomConsumer<BottomNavigationBarProvider>(

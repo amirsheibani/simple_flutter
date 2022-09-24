@@ -128,6 +128,16 @@ class S {
     );
   }
 
+  /// `Animation`
+  String get animation {
+    return Intl.message(
+      'Animation',
+      name: 'animation',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Chat`
   String get chat {
     return Intl.message(
